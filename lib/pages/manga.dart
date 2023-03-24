@@ -375,20 +375,25 @@ class MangaPage extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 20,
-            top: 590,
-            child: Card(
-              color: Color.fromARGB(255, 255, 255, 255),
-              elevation: 0,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-                side: const BorderSide(
-                  color: Color.fromARGB(255, 202, 202, 202),
-                  width: 1,
+            left: 22,
+            top: 594,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  side: const BorderSide(
+                    color: Color.fromARGB(255, 202, 202, 202),
+                    width: 1,
+                  ),
                 ),
               ),
+              onPressed: () {
+                // Ação ao clicar no botão
+              },
               child: const SizedBox(
-                width: 150,
+                width: 120,
                 height: 60,
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(0, 18, 0, 0),
@@ -406,19 +411,24 @@ class MangaPage extends StatelessWidget {
           ),
           Positioned(
             right: 20,
-            top: 590,
-            child: Card(
-              color: Color.fromARGB(255, 203, 141, 253),
-              elevation: 0,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-                side: const BorderSide(
-                  color: Color.fromARGB(255, 203, 141, 253),
-                  width: 1,
+            top: 594,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 203, 141, 253),
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  side: const BorderSide(
+                    color: Color.fromARGB(255, 203, 141, 253),
+                    width: 1,
+                  ),
                 ),
               ),
+              onPressed: () {
+                // Ação ao clicar no botão
+              },
               child: const SizedBox(
-                width: 150,
+                width: 120,
                 height: 60,
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(0, 18, 0, 0),
