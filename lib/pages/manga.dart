@@ -4,7 +4,6 @@ import 'package:projeto_ifood/pages/checkout.dart';
 import 'package:projeto_ifood/pages/home.dart';
 
 class MangaPage extends StatelessWidget {
-  
   const MangaPage({super.key});
 
   @override
@@ -27,7 +26,7 @@ class MangaPage extends StatelessWidget {
         elevation: 0,
         actions: [
           Card(
-            color:const Color.fromARGB(255, 235, 235, 235),
+            color: const Color.fromARGB(255, 235, 235, 235),
             elevation: 0,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(100),
