@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:projeto_ifood/pages/manga.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,6 +11,10 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Stack(
           children: [
+            Container(
+              color: const Color.fromARGB(
+                  255, 255, 255, 255), // define a cor de fundo
+            ),
             Positioned(
               left: 1,
               top: 0,
@@ -25,7 +30,6 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            
             Positioned(
               left: -25,
               top: 0,
@@ -119,18 +123,28 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: 60,
+              right: 43,
               top: 630,
-              child: Card(
-                color: const Color.fromARGB(255, 155, 105, 196),
-                elevation: 0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25),
-                  side: const BorderSide(
-                    color: Color.fromARGB(255, 203, 141, 253),
-                    width: 1,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 155, 105, 196),
+                  elevation: 0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25),
+                    side: const BorderSide(
+                      color: Color.fromARGB(255, 203, 141, 253),
+                      width: 1,
+                    ),
                   ),
                 ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return const MangaPage();
+                    }),
+                  );
+                },
                 child: const SizedBox(
                   width: 240,
                   height: 60,
@@ -139,9 +153,10 @@ class HomePage extends StatelessWidget {
                     child: Text(
                       'Get Started',
                       style: TextStyle(
-                          fontSize: 22,
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          fontWeight: FontWeight.bold),
+                        fontSize: 22,
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        fontWeight: FontWeight.bold,
+                      ),
                       textAlign: TextAlign.center,
                     ),
                   ),

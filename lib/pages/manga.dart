@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:projeto_ifood/pages/checkout.dart';
+import 'package:projeto_ifood/pages/home.dart';
 
 class MangaPage extends StatelessWidget {
+  
   const MangaPage({super.key});
 
   @override
@@ -11,7 +14,12 @@ class MangaPage extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.chevron_left_sharp),
           onPressed: () {
-            // ação a ser executada quando o ícone for pressionado
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) {
+                return const HomePage();
+              }),
+            );
           },
         ),
         title: const Text('Manga'),
@@ -19,7 +27,7 @@ class MangaPage extends StatelessWidget {
         elevation: 0,
         actions: [
           Card(
-            color: Color.fromARGB(255, 235, 235, 235),
+            color:const Color.fromARGB(255, 235, 235, 235),
             elevation: 0,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(100),
@@ -40,6 +48,10 @@ class MangaPage extends StatelessWidget {
       body: Center(
           child: Stack(
         children: [
+          Container(
+            color: const Color.fromARGB(
+                255, 255, 255, 255), // define a cor de fundo
+          ),
           const Positioned(
             left: -20,
             top: -10,
@@ -379,7 +391,7 @@ class MangaPage extends StatelessWidget {
             top: 594,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                backgroundColor: const Color.fromARGB(255, 255, 255, 255),
                 elevation: 0,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -414,7 +426,7 @@ class MangaPage extends StatelessWidget {
             top: 594,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 203, 141, 253),
+                backgroundColor: const Color.fromARGB(255, 203, 141, 253),
                 elevation: 0,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -425,7 +437,12 @@ class MangaPage extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                // Ação ao clicar no botão
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return const CheckOut();
+                  }),
+                );
               },
               child: const SizedBox(
                 width: 120,

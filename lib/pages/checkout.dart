@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:projeto_ifood/pages/manga.dart';
 
 class CheckOut extends StatelessWidget {
   const CheckOut({super.key});
@@ -11,7 +12,12 @@ class CheckOut extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.chevron_left_sharp),
           onPressed: () {
-            // ação a ser executada quando o ícone for pressionado
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) {
+                return const MangaPage();
+              }),
+            );
           },
         ),
         title: const Text('Checkout'),

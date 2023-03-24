@@ -36,6 +36,7 @@ MaterialColor white = const MaterialColor(
 
 void main() {
   runApp(const MyApp());
+  
 }
 
 class MyApp extends StatelessWidget {
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: myColor,
         scaffoldBackgroundColor: myColor,
       ),
-      home: const CheckOut(),
+      home: const MangaPage(),
     );
   }
 }
