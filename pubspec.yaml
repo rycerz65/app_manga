@@ -26,6 +26,7 @@ flutter:
     - assets/img/alface.png
     - assets/img/motoquerofantama.png
     - assets/img/aribaba.png
+    - assets/img/banana.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

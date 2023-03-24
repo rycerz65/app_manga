@@ -14,24 +14,15 @@ class CheckOut extends StatelessWidget {
             // ação a ser executada quando o ícone for pressionado
           },
         ),
-        title: const Text('Manga'),
+        title: const Text('Checkout'),
         centerTitle: true,
         elevation: 0,
         actions: [
           Card(
-            color: Color.fromARGB(255, 235, 235, 235),
+            color: const Color.fromARGB(255, 235, 235, 235),
             elevation: 0,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(100),
-            ),
-            child: SizedBox(
-              width: 47,
-              height: 47,
-              child: IconButton(
-                icon: const Icon(CupertinoIcons.heart_fill),
-                color: const Color.fromARGB(255, 168, 107, 248),
-                onPressed: () {},
-              ),
             ),
           ),
         ],
@@ -40,104 +31,322 @@ class CheckOut extends StatelessWidget {
       body: Center(
           child: Stack(
         children: [
-          const Positioned(
-            left: -20,
-            top: -10,
+          Positioned(
+            left: 20,
+            top: 10,
+            child: Row(
+              children: const [
+                Text(
+                  'Order Details',
+                  style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+
+          //--------------------------------------CARD BANANA----------------------------------
+          Positioned(
+            left: 20,
+            top: 55,
             child: Card(
-              color: Color.fromARGB(255, 248, 248, 248),
+              color: const Color.fromARGB(255, 255, 255, 255),
               elevation: 0,
-              child: SizedBox(
-                width: 390,
-                height: 258,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: const SizedBox(
+                width: 314,
+                height: 120,
+              ),
+            ),
+          ),
+
+          //------caixa abaixo da banana
+          Positioned(
+            left: 40,
+            top: 75,
+            child: Card(
+              color: const Color.fromARGB(255, 255, 255, 240),
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: const SizedBox(
+                width: 100,
+                height: 80,
+              ),
+            ),
+          ),
+
+          //---------imagem da banana
+          Positioned(
+            left: 65,
+            top: 88,
+            child: Image.asset(
+              'assets/img/banana.png',
+              width: 60,
+              height: 60,
+            ),
+          ),
+
+          //---------------escrita 'Banana'
+          Positioned(
+            left: 150,
+            top: 85,
+            child: Row(
+              children: const [
+                Text(
+                  'Banana',
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+          //--------------escrita 'Fruits'
+          Positioned(
+            left: 150,
+            top: 110,
+            child: Row(
+              children: const [
+                Text(
+                  'Fruits',
+                  style: TextStyle(
+                      fontSize: 13,
+                      color: Color.fromARGB(255, 197, 197, 197),
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+          //--------- quantidade banana
+          Positioned(
+            left: 150,
+            top: 135,
+            child: Row(
+              children: const [
+                Text(
+                  '80 pc',
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+
+          //------------------ + e -
+          Positioned(
+            left: 250,
+            top: 85,
+            child: Card(
+              color: const Color.fromARGB(245, 235, 228, 236),
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(100),
+              ),
+              child: const SizedBox(
+                width: 30,
+                height: 30,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(9, 2, 0, 0),
+                  child: Text('__'),
+                ),
               ),
             ),
           ),
           Positioned(
-            left: 70,
-            top: -10,
-            child: Image.asset(
-              'assets/img/mangaboa.png',
-              width: 250,
-              height: 250,
-            ),
-          ),
-          Positioned(
-            left: 90,
-            top: 220,
-            child: Row(
-              children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                    minimumSize: const Size(100, 60),
-                  ),
-                  child: const Text(
-                    '-   ',
-                    style: TextStyle(fontSize: 48, color: Colors.black),
+            left: 288,
+            top: 85,
+            child: Card(
+              color: const Color.fromARGB(255, 155, 105, 196),
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(100),
+              ),
+              child: const SizedBox(
+                width: 30,
+                height: 30,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(9, 3, 0, 0),
+                  child: Text(
+                    '+',
+                    style: TextStyle(fontSize: 20),
                   ),
                 ),
-              ],
+              ),
             ),
           ),
+
+          //------------------valor total banan
           Positioned(
-            left: 160,
-            top: 220,
-            child: Row(
-              children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                    minimumSize: const Size(100, 60),
-                  ),
-                  child: const Text(
-                    '   +',
-                    style: TextStyle(fontSize: 28, color: Colors.black),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Positioned(
-            left: 145,
-            top: 220,
-            child: Row(
-              children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 255, 176, 242),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(100.0),
-                    ),
-                    minimumSize: const Size(60, 60),
-                  ),
-                  child: const Text(
-                    '2',
-                    style: TextStyle(
-                      fontSize: 28,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Positioned(
-            left: 20,
-            top: 310,
+            left: 255,
+            top: 135,
             child: Row(
               children: const [
                 Text(
-                  'Duncan Mango',
+                  '\$160.00',
                   style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 16,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+          //----------------------------------------CARD PIMENTAO---------------------------------------
+
+          Positioned(
+            left: 20,
+            top: 195,
+            child: Card(
+              color: const Color.fromARGB(255, 255, 255, 255),
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: const SizedBox(
+                width: 314,
+                height: 120,
+              ),
+            ),
+          ),
+          //------caixa abaixo do pimentao
+          Positioned(
+            left: 40,
+            top: 215,
+            child: Card(
+              color: const Color.fromARGB(255, 255, 227, 242),
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: const SizedBox(
+                width: 100,
+                height: 80,
+              ),
+            ),
+          ),
+
+          //---------imagem do pimentao
+          Positioned(
+            left: 63,
+            top: 230,
+            child: Image.asset(
+              'assets/img/pimentaoan.png',
+              width: 60,
+              height: 60,
+            ),
+          ),
+
+          //---------------escrita 'Pimentao'
+          Positioned(
+            left: 150,
+            top: 220,
+            child: Row(
+              children: const [
+                Text(
+                  'Bell Paper',
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+          //--------------escrita 'Fruits'
+          Positioned(
+            left: 150,
+            top: 245,
+            child: Row(
+              children: const [
+                Text(
+                  'Fruits',
+                  style: TextStyle(
+                      fontSize: 13,
+                      color: Color.fromARGB(255, 197, 197, 197),
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+          //--------- quantidade Pimenta
+          Positioned(
+            left: 150,
+            top: 270,
+            child: Row(
+              children: const [
+                Text(
+                  '4 KG',
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+
+          //------------------ + e -
+          Positioned(
+            left: 250,
+            top: 220,
+            child: Card(
+              color: const Color.fromARGB(245, 235, 228, 236),
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(100),
+              ),
+              child: const SizedBox(
+                width: 30,
+                height: 30,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(9, 2, 0, 0),
+                  child: Text('__'),
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            left: 288,
+            top: 220,
+            child: Card(
+              color: const Color.fromARGB(255, 155, 105, 196),
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(100),
+              ),
+              child: const SizedBox(
+                width: 30,
+                height: 30,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(9, 3, 0, 0),
+                  child: Text(
+                    '+',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          //------------------valor total pimentao
+          Positioned(
+            left: 255,
+            top: 275,
+            child: Row(
+              children: const [
+                Text(
+                  '\$150.00',
+                  style: TextStyle(
+                      fontSize: 16,
                       color: Colors.black,
                       fontWeight: FontWeight.bold),
                 ),
@@ -145,92 +354,82 @@ class CheckOut extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 260,
-            top: 300,
-            child: Row(
-              children: const [
-                Text(
-                  '\$2.00',
-                  style: TextStyle(
-                      fontSize: 30,
-                      color: Color.fromARGB(255, 203, 141, 253),
-                      fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  'PC',
-                  style: TextStyle(
-                      fontSize: 10,
-                      color: Color.fromARGB(255, 203, 141, 253),
-                      fontWeight: FontWeight.bold),
-                )
-              ],
-            ),
-          ),
-          Positioned(
-            left: 20,
-            top: 350,
-            child: Row(
-              children: const [
-                Text(
-                  'Description',
-                  style: TextStyle(
-                      fontSize: 18,
-                      color: Color.fromARGB(255, 0, 0, 0),
-                      fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-          ),
-          Positioned(
-            left: 20,
-            top: 380,
-            child: Row(
-              children: const [
-                Text(
-                  'A mango is a sweet tropical fruit, and it\'s also the name \nof the trees on which the fruit grows.',
-                  style: TextStyle(
-                    fontSize: 13,
-                    color: Color.fromARGB(255, 58, 58, 58),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Positioned(
-            left: 237,
-            top: 395,
-            child: Row(
-              children: const [
-                Text(
-                  'See more',
-                  style: TextStyle(
-                    fontSize: 13,
-                    color: Color.fromARGB(255, 203, 141, 253),
-                  ),
-                ),
-              ],
+            left: -3,
+            top: 340,
+            child: Card(
+              color: const Color.fromARGB(255, 255, 255, 255),
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: const SizedBox(
+                width: 358,
+                height: 360,
+              ),
             ),
           ),
           Positioned(
             left: 15,
-            top: 420,
+            top: 360,
             child: Card(
-              color: const Color.fromARGB(255, 255, 176, 242),
+              color: const Color.fromARGB(255, 255, 255, 255),
               elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+                side: const BorderSide(
+                  color: Color.fromARGB(255, 246, 246, 246),
+                  width: 1,
+                ),
+              ),
+              child: const SizedBox(
+                width: 320,
+                height: 60,
+              ),
+            ),
+          ),
+
+          Positioned(
+            left: 32,
+            top: 372,
+            child: Card(
+              color: const Color.fromARGB(255, 246, 246, 246),
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const SizedBox(
+                width: 35,
+                height: 35,
+              ),
+            ),
+          ),
+
+          Positioned(
+            left: 40,
+            top: 380,
+            child: Card(
+              color: const Color.fromARGB(255, 246, 246, 246),
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(100),
+                side: const BorderSide(
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  width: 1,
+                ),
+              ),
               child: SizedBox(
-                width: 26,
-                height: 26,
+                width: 18,
+                height: 18,
                 child: Column(
                   children: const [
                     Align(
                       alignment: Alignment.center,
                       child: Padding(
-                        padding: EdgeInsets.fromLTRB(0, 1, 0, 0),
-                        child: Icon(
-                          Icons.star_border_purple500_outlined,
-                          color: Color.fromARGB(255, 255, 255, 255),
-                        ),
-                      ),
+                          padding: EdgeInsets.fromLTRB(0, 1, 0, 0),
+                          child: Text(
+                            '%',
+                            style: TextStyle(fontSize: 14),
+                          )),
                     ),
                   ],
                 ),
@@ -238,198 +437,181 @@ class CheckOut extends StatelessWidget {
             ),
           ),
           const Positioned(
-            left: 58,
-            top: 427,
-            child: Align(
-              alignment: Alignment.center,
-              child: Padding(
-                  padding: EdgeInsets.fromLTRB(0, 3, 0, 0),
-                  child: Text(
-                    '4.8 Star',
-                    style: TextStyle(
-                        fontSize: 15,
-                        color: Color.fromARGB(255, 0, 0, 0),
-                        fontWeight: FontWeight.bold),
-                  )),
+            left: 80,
+            top: 386,
+            child: Text(
+              'Promo Code',
+              style: TextStyle(
+                  fontSize: 14,
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+
+          Positioned(
+            right: 30,
+            top: 378,
+            child: SizedBox(
+              width: 70,
+              height: 33,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 155, 105, 196),
+                  elevation: 0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    side: const BorderSide(
+                      color: Color.fromARGB(255, 203, 141, 253),
+                      width: 1,
+                    ),
+                  ),
+                ),
+                child: const Text(
+                  'Apply',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ),
           ),
           Positioned(
-            left: 140,
-            top: 420,
+            left: 15,
+            top: 440,
             child: Card(
-              color: const Color.fromARGB(255, 255, 176, 242),
+              color: const Color.fromARGB(255, 248, 248, 248),
               elevation: 0,
-              child: SizedBox(
-                width: 26,
-                height: 26,
-                child: Column(
-                  children: const [
-                    Align(
-                      alignment: Alignment.center,
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(0, 1, 0, 0),
-                        child: Icon(
-                          Icons.access_time_sharp,
-                          color: Color.fromARGB(255, 255, 255, 255),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: const SizedBox(
+                width: 320,
+                height: 140,
               ),
             ),
           ),
           const Positioned(
-            left: 180,
-            top: 427,
-            child: Align(
-              alignment: Alignment.center,
-              child: Padding(
-                  padding: EdgeInsets.fromLTRB(0, 3, 0, 0),
-                  child: Text(
-                    '1 Day',
-                    style: TextStyle(
-                        fontSize: 15,
-                        color: Color.fromARGB(255, 0, 0, 0),
-                        fontWeight: FontWeight.bold),
-                  )),
+            left: 30,
+            top: 460,
+            child: Text(
+              'Subtotal',
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  fontWeight: FontWeight.bold),
             ),
           ),
           const Positioned(
-            left: 20,
+            right: 30,
+            top: 507,
+            child: Text(
+              'Free',
+              style: TextStyle(
+                  fontSize: 14,
+                  color: Color.fromARGB(255, 155, 154, 154),
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+          const Positioned(
+            right: 30,
+            top: 553,
+            child: Text(
+              '\$220.00',
+              style: TextStyle(
+                  fontSize: 14,
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+
+          const Positioned(
+            right: 30,
+            top: 460,
+            child: Text(
+              '\$220.00',
+              style: TextStyle(
+                  fontSize: 14,
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+          const Positioned(
+            left: 30,
+            top: 507,
+            child: Text(
+              'Delivery Free',
+              style: TextStyle(
+                  fontSize: 14,
+                  color: Color.fromARGB(255, 155, 154, 154),
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+          const Positioned(
+            left: 30,
+            top: 550,
+            child: Text(
+              'Total',
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+          //---------------------------------------------------Linhas
+          const Positioned(
+            left: 28,
+            top: 530,
+            child: Text(
+              '___________________________________________________________________',
+              style: TextStyle(
+                  fontSize: 10,
+                  color: Color.fromARGB(255, 212, 212, 212),
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+          const Positioned(
+            left: 28,
             top: 480,
-            child: Align(
-              alignment: Alignment.center,
-              child: Padding(
-                  padding: EdgeInsets.fromLTRB(0, 3, 0, 0),
-                  child: Text(
-                    'Other items',
-                    style: TextStyle(
-                        fontSize: 25,
-                        color: Color.fromARGB(255, 0, 0, 0),
-                        fontWeight: FontWeight.bold),
-                  )),
+            child: Text(
+              '___________________________________________________________________',
+              style: TextStyle(
+                  fontSize: 10,
+                  color: Color.fromARGB(255, 212, 212, 212),
+                  fontWeight: FontWeight.bold),
             ),
           ),
-          const Positioned(
-            right: 20,
-            top: 520,
-            child: Card(
-              color: Color.fromARGB(255, 251, 255, 216),
-              elevation: 0,
-              child: SizedBox(
-                width: 95,
-                height: 45,
-              ),
-            ),
-          ),
-          Positioned(
-            right: 47,
-            top: 521,
-            child: Image.asset(
-              'assets/img/pimentaoan.png',
-              width: 52,
-              height: 52,
-            ),
-          ),
-          const Positioned(
-            left: 20,
-            top: 520,
-            child: Card(
-              color: Color.fromARGB(255, 253, 228, 228),
-              elevation: 0,
-              child: SizedBox(
-                width: 95,
-                height: 45,
-              ),
-            ),
-          ),
-          Positioned(
-            left: 54,
-            top: 526,
-            child: Image.asset(
-              'assets/img/tomatinhoan.png',
-              width: 40,
-              height: 40,
-            ),
-          ),
-          const Positioned(
-            left: 128,
-            top: 520,
-            child: Card(
-              color: Color.fromARGB(255, 238, 255, 235),
-              elevation: 0,
-              child: SizedBox(
-                width: 95,
-                height: 45,
-              ),
-            ),
-          ),
-          Positioned(
-            left: 158,
-            top: 527,
-            child: Image.asset(
-              'assets/img/alface.png',
-              width: 42,
-              height: 42,
-            ),
-          ),
-          Positioned(
-            left: 20,
-            top: 590,
-            child: Card(
-              color: Color.fromARGB(255, 255, 255, 255),
-              elevation: 0,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-                side: const BorderSide(
-                  color: Color.fromARGB(255, 202, 202, 202),
-                  width: 1,
-                ),
-              ),
-              child: const SizedBox(
-                width: 150,
-                height: 60,
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(0, 18, 0, 0),
-                  child: Text(
-                    'Add to cart',
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Color.fromARGB(255, 202, 202, 202),
-                        fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          //---------------------------------------------------Botao place order
           Positioned(
             right: 20,
-            top: 590,
-            child: Card(
-              color: Color.fromARGB(255, 203, 141, 253),
-              elevation: 0,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-                side: const BorderSide(
-                  color: Color.fromARGB(255, 203, 141, 253),
-                  width: 1,
-                ),
-              ),
-              child: const SizedBox(
-                width: 150,
-                height: 60,
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(0, 18, 0, 0),
-                  child: Text(
-                    'Buy Now',
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
+            top: 600,
+            child: SizedBox(
+              width: 320,
+              height: 60,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromARGB(255, 155, 105, 196),
+                  elevation: 0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    side: const BorderSide(
+                      color: Color.fromARGB(255, 203, 141, 253),
+                      width: 1,
+                    ),
                   ),
+                ),
+                child: const Text(
+                  'Place Order',
+                  style: TextStyle(
+                    fontSize: 17,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
               ),
             ),
